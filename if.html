@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Info</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background-color: #4a4e58;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #45495e;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    nav {
+      background-color: #333541;
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      padding: 15px 0;
+    }
+
+    .menu-item {
+      text-align: center;
+      position: relative;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .menu-item img {
+      width: 60px;
+      height: 60px;
+      display: block;
+      margin: 0 auto 5px;
+    }
+
+    .placeholder {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 5px;
+      visibility: hidden;
+    }
+
+    .hide {
+      display: none;
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #ffffff;
+      background-color: #333541;
+      padding: 4px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .menu-item:hover .hide {
+      display: block;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+      transition: transform 0.2s ease;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      transform: scale(1.3);
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .boss-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 2rem 0 1rem;
+      font-size: 1.8rem;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .item {
+      position: relative;
+      background: #1f1f1f;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      color: #ffffff;
+      overflow: hidden;
+      transition: transform 0.3s;
+      min-height: 200px;
+    }
+
+    .item:hover {
+      transform: scale(1.02);
+      cursor: pointer;
+    }
+
+    .item::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 0;
+    }
+
+    .item h2,
+    .item p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .item1 { 
+      background-image: url('https://static1.thegamerimages.com/wordpress/wp-content/uploads/2022/07/Dirtmouth-Hollow-Knight.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .item2 { 
+      background-image: url('https://tse2.mm.bing.net/th/id/OIP.WfxvvxS4mfc0EzzeQDOTUwHaEK?pid=Api&P=0&h=180');
+      background-size: cover;
+      background-position: center;
+    }
+    .item3 { 
+      background-image: url('https://tse4.mm.bing.net/th/id/OIP.AHCJ0_5-hDyJzluIeDwbuwHaEK?pid=Api');
+      background-size: cover;
+      background-position: center;
+    }
+    .item4 { 
+      background-image: url('https://tse4.mm.bing.net/th/id/OIP.NHH3trHdp9G2IEu_XRrIYAHaDt?pid=Api&P=0&h=180');
+      background-size: cover;
+      background-position: center;
+    }
+    .item5 { 
+      background-image: url('https://tse1.mm.bing.net/th/id/OIP.N_RTnYSMeTJvbN7AtEpWsQHaEK?pid=Api&P=0&h=180');
+      background-size: cover;
+      background-position: center;
+    }
+    .item6 { 
+      background-image: url('https://pm1.aminoapps.com/7630/b5170d142f0f543033ab32ba1e39997fca6bace1r1-2048-1152v2_uhq.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .item7 { 
+      background-image: url('https://tse2.mm.bing.net/th/id/OIP.vREIOCCcdv_stTex184O6gHaEK?pid=Api&P=0&h=180');
+      background-size: cover;
+      background-position: center;
+    }
+    .item8 { 
+      background-image: url('https://tse2.mm.bing.net/th/id/OIP.tw1xZ_cNI6jF6DmLNaveqAHaDt?pid=Api&P=0&h=180');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HOLLOW gaming</h1>
+  </header>
+
+  <nav>
+    <div class="menu-item">
+      <a href="index.html">Home</a>
+    </div>
+    <div class="menu-item">
+      <div class="placeholder"></div>
+      <a href="why.html">Why</a>
+    </div>
+    <div class="menu-item">
+      <img src="Laststag.png" alt="stag">
+      <a href="if.html">Info</a>
+    </div>
+    <div class="menu-item">
+      <div class="placeholder"></div>
+      <a href="about.html">About author</a>
+    </div>
+    <div class="menu-item">
+      <div class="placeholder"></div>
+      <a href="exp.html">Experience</a>
+    </div>
+  </nav>
+
+  <main>
+    <h2 class="section-title">Essential Areas</h2>
+    <div class="grid">
+      <section class="item item1">
+        <h2>Dirtmouth</h2>
+        <p>The quiet town at the entrance of Hallownest. It serves as the main hub where the Knight returns to after exploring.</p>
+      </section>
+
+      <section class="item item2">
+        <h2>City of Tears</h2>
+        <p>A vast, rain-soaked city deep underground. It was once the thriving capital of Hallownest.</p>
+      </section>
+
+      <section class="item item3">
+        <h2>Greenpath</h2>
+        <p>A lush, overgrown area filled with vegetation and mysterious creatures. It's the first major region after Dirtmouth.</p>
+      </section>
+
+      <section class="item item4">
+        <h2>Fog canyon</h2>
+        <p>Fog Canyon is a glowing cavern filled with jellyfish-like creatures and crackling electricity. Its calm beauty hides the dangers within.</p>
+      </section>
+    </div>
+
+    <h2 class="section-title">Required Bosses</h2>
+    <div class="boss-grid">
+      <section class="item item5">
+        <h2>Uumuu</h2>
+        <p>Guardian of the Teacher’s Archive in Fog Canyon. Must be defeated to awaken Monomon the Teacher.</p>
+      </section>
+
+      <section class="item item6">
+        <h2>Watcher Knights</h2>
+        <p>Six ancient protectors found in the Watcher’s Spire. Defeat them to reach Lurien the Watcher.</p>
+      </section>
+
+      <section class="item item7">
+        <h2>Hollow Knight</h2>
+        <p>The vessel that sealed the Infection. Defeating it leads to the Radiance fight if conditions are met.</p>
+      </section>
+    </div>
+
+    <h2 class="section-title">True Final Boss</h2>
+    <section class="item item8" style="margin-top:1.5rem;">
+      <h2>The Radiance</h2>
+      <p>The true final boss and source of the Infection. A being of light sealed away within the Hollow Knight.</p>
+    </section>
+  </main>
+</body>
+</html>

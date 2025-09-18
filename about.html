@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About author</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background-color: #4a4e58;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #45495e;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    nav {
+      background-color: #333541;
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      padding: 15px 0;
+    }
+
+    .menu-item {
+      text-align: center;
+      position: relative;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .menu-item img {
+      width: 60px;
+      height: 60px;
+      display: block;
+      margin: 0 auto 5px;
+    }
+
+    .placeholder {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 5px;
+      visibility: hidden;
+    }
+
+    .hide {
+      display: none;
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #ffffff;
+      background-color: #333541;
+      padding: 4px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .menu-item:hover .hide {
+      display: block;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+      transition: transform 0.2s ease;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      transform: scale(1.3);
+    }
+
+    main {
+      display: grid;
+      grid-template-areas:
+        "item1 item2"
+        "item3 item5"
+        "item4 item5";
+      grid-template-columns: 2fr 1fr;
+      grid-gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .item {
+      position: relative;
+      background: #1f1f1f;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      color: #ffffff;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .item:hover {
+      transform: scale(1.02);
+      cursor: pointer;
+    }
+
+    .item::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 0;
+    }
+
+    .item h2,
+    .item p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .item1 { grid-area: item1; background-image: url('https://purenintendo.com/wp-content/uploads/2018/07/Switch_HollowKnight_screenshot_01.jpg'); background-size: cover; background-position: center;}
+    .item2 { grid-area: item5; background-image: url('https://cdn.wikimg.net/en/hkwiki/images/9/90/Seal_2.png'); background-size: cover; background-position: center;}
+    .item3 { grid-area: item3; background-image: url('https://images.immediate.co.uk/production/volatile/sites/3/2025/09/how-long-is-hollow-knight-silksong-7847758.jpg?quality=90&resize=980,654'); background-size: cover; background-position: center;}
+    .item4 { grid-area: item4; background-image: url('https://tse3.mm.bing.net/th/id/OIP.c9Fd8KUB2iLpg-3uNWNo8QHaFO?pid=Api&P=0&h=180'); background-size: contain; background-position: center;}
+    .item5 { grid-area: item2; background-image: url('https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/ss_5478c9192023a3b3e438c030caa0809b62523587.1920x1080.jpg?t=1695270428'); background-size: cover; background-position: center;}
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>HOLLOW gaming</h1>
+  </header>
+
+  <nav>
+    <div class="menu-item">
+      <div class="placeholder"></div>
+      <a href="index.html">Home</a>
+    </div>
+
+    <div class="menu-item">
+      <div class="placeholder"></div>
+      <a href="why.html">Why</a>
+    </div>
+
+    <div class="menu-item">
+      <div class="placeholder"></div>
+      <a href="if.html">Info</a>
+    </div>
+
+    <div class="menu-item">
+      <img src="Laststag.png" alt="stag">
+      <a href="about.html">About Author</a>
+    </div>
+
+    <div class="menu-item">
+      <div class="placeholder"></div>
+      <a href="exp.html">Experience</a>
+    </div>
+  </nav>
+<main>
+  <section class="item item1">
+    <h2>About Me</h2>
+    <p>Hello! I’m a huge Hollow Knight fan and enjoy exploring its world.  
+       I created this project to share my love for the game and my passion for game design.</p>
+  </section>
+
+  <section class="item item2">
+    <h2>Fun Facts</h2>
+    <p>I love the music, art, and the feeling of discovery in Hallownest!</p>
+  </section>
+
+  <section class="item item3">
+    <h2>Inspiration</h2>
+    <p>The game inspired me to pursue exploration-based storytelling and game creation. I have a game under development in godot and currently implementing soundtracks</p>
+  </section>
+
+  <section class="item item4">
+    <h2>Favorite Characters</h2>
+    <p>Hornet, Quirrel, and Zote are among my favorites.</p>
+  </section>
+
+  <section class="item item5">
+    <h2>Achievements</h2>
+    <p>I’ve completed Hollow Knight 112% including all radiant bosses and Pantheon 5. Currently playing Silksong!</p>
+  </section>
+</main>
+
+</body>
+</html>
